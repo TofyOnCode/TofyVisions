@@ -1,0 +1,49 @@
+$primary-color: #555;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .btn {
+        margin-left: 15px;
+        background-color: darken($primary-color, 10%);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+}
+
+.introduction, .features, .gallery-preview, .call-to-action {
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: $primary-color;
+}
+
+footer {
+    background-color: darken($primary-color, 10%);
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+}
