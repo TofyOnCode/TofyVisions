@@ -1,6 +1,9 @@
 <nav class="navbar">
   <div class="logo">TofyVisions</div>
   <div class="nav-buttons">
+      <a routerLink="/home" class="btn">Domov</a>
+      <a routerLink="/gallery" class="btn">Galerija</a>
+      <a routerLink="/about" class="btn">O nas</a>
       <a routerLink="/login" class="btn">Prijava</a>
       <a routerLink="/register" class="btn">Registracija</a>
   </div>
@@ -8,37 +11,98 @@
 
 <router-outlet></router-outlet>
 
-<div class="introduction">
+<router-outlet></router-outlet>
+
+<section class="hero-section">
   <h1>Dobrodošli v TofyVisions</h1>
   <p>TofyVisions je platforma za umetnike, kjer lahko delite svoja dela, odkrijete nove umetnosti in se povežete z drugimi ustvarjalci.</p>
-</div>
+  <a routerLink="/register" class="btn cta-button">Pridruži se zdaj</a>
+</section>
 
-<div class="features">
+<section class="features">
   <h2>Funkcionalnosti:</h2>
-  <ul>
-      <li>Registracija in prijava uporabnikov.</li>
-      <li>Urejanje profila z biografijo, povezavami in portfeljem.</li>
-      <li>Možnost dodajanja slik, videoposnetkov in 3D modelov.</li>
-      <!-- ...ostale funkcionalnosti... -->
-  </ul>
-</div>
+  <div class="feature-card">
+      <h3>Registracija in prijava uporabnikov</h3>
+      <p>Ustvari svoj račun in začni deliti svojo umetnost.</p>
+  </div>
+  <div class="feature-card">
+      <h3>Urejanje profila</h3>
+      <p>Uredi svoj profil, dodaj biografijo, povezave in portfelj.</p>
+  </div>
+  <!-- ...ostale funkcionalnosti... -->
+</section>
 
-<div class="gallery-preview">
+<section class="gallery-preview">
   <h2>Izbrane umetnine</h2>
   <div class="galerija">
-      <img src="path-to-image1.jpg" alt="Umetnina 1">
-      <img src="path-to-image2.jpg" alt="Umetnina 2">
-      <img src="path-to-image3.jpg" alt="Umetnina 3">
-      <!-- ...več slik... -->
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika1.jpeg" alt="Umetnina 1">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika2.jpeg" alt="Umetnina 2">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika3.jpeg" alt="Umetnina 3">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika4.jpeg" alt="Umetnina 4">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika5.jpeg" alt="Umetnina 5">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika6.jpeg" alt="Umetnina 6">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika7.jpeg" alt="Umetnina 7">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika8.jpeg" alt="Umetnina 8">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika9.jpeg" alt="Umetnina 9">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika10.jpeg" alt="Umetnina 10">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika11.jpeg" alt="Umetnina 11">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika12.jpeg" alt="Umetnina 12">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika13.jpeg" alt="Umetnina 13">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika14.jpeg" alt="Umetnina 14">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika15.jpeg" alt="Umetnina 15">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika16.jpeg" alt="Umetnina 16">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika17.jpeg" alt="Umetnina 17">
+      </div>
+      <div class="gallery-card">
+          <img src="../assets/pictures/slika18.jpeg" alt="Umetnina 18">
+      </div>
   </div>
-</div>
+</section>
 
-<div class="call-to-action">
+
+<section class="call-to-action">
   <h2>Postanite del naše skupnosti</h2>
   <p>Registrirajte se danes in začnite deliti svojo umetnost z drugimi!</p>
-  <a routerLink="/register" class="btn">Registracija</a>
-</div>
+  <a routerLink="/register" class="btn cta-button">Registracija</a>
+</section>
 
 <footer>
   <p>© 2023 TofyVisions. Vse pravice pridržane.</p>
+  <div class="footer-links">
+      <a routerLink="/terms">Pogoji uporabe</a>
+      <a routerLink="/privacy">Politika zasebnosti</a>
+  </div>
 </footer>

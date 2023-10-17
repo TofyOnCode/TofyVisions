@@ -1,16 +1,13 @@
-$primary-color: #555;
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
 
 .navbar {
     background-color: $primary-color;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    align-items: center; // Vertikalno poravnavanje elementov v sredini
+    padding: 1rem 2rem; // Dodajanje notranjega prostora za navigacijsko vrstico
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Senca za tridimenzionalni učinek
 
     .logo {
         font-size: 1.5rem;
@@ -18,32 +15,150 @@ body {
         color: white;
     }
 
+    .nav-buttons {
+        display: flex;
+        align-items: center; // Vertikalno poravnavanje gumbov v sredini
+    }
+
     .btn {
         margin-left: 15px;
-        background-color: darken($primary-color, 10%);
+        background-color: $secondary-color;
+        color: white;
         border: none;
         padding: 10px 15px;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
 
         &:hover {
-            background-color: darken($primary-color, 20%);
+            background-color: darken($secondary-color, 10%);
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
     }
 }
 
-.introduction, .features, .gallery-preview, .call-to-action {
-    padding: 2rem;
+
+.hero-section {
+    background-image: url('../assets/pictures/slika1.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        background-color: $secondary-color;
+        color: white;
+        padding: 0.5rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
 }
 
-h1, h2 {
-    color: $primary-color;
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+
+    .feature-card {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 2rem;
+        margin: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.gallery-preview {
+    padding: 2rem;
+
+    .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .gallery-card {
+        width: 300px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 footer {
-    background-color: darken($primary-color, 10%);
-    padding: 1rem 0;
-    text-align: center;
+    background-color: $secondary-color;
     color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    .footer-links a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.galerija {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; // ali uporabite space-between, če želite
+
+    .artwork {
+        width: calc(100% / 6); // širina vsake slike je enaka šestini razpoložljive širine
+        max-width: 150px; // ali katera koli druga vrednost, ki jo želite
+        height: auto;
+        margin: 10px; // dodajanje nekaj prostora okoli vsake slike
+    }
 }
