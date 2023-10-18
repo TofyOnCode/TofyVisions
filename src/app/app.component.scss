@@ -43,7 +43,7 @@ $secondary-color: #2c3e50;
 
 
 .hero-section {
-    background-image: url('../assets/pictures/slika1.jpeg');
+    background-image: url('../assets/pictures/back1.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -160,5 +160,88 @@ footer {
         max-width: 150px; // ali katera koli druga vrednost, ki jo želite
         height: auto;
         margin: 10px; // dodajanje nekaj prostora okoli vsake slike
+    }
+}
+
+
+.gallery-preview {
+    padding: 2rem;
+
+    .gallery-card {
+        width: calc(100% / 6); // širina vsake slike je enaka šestini razpoložljive širine
+        max-width: 150px; // ali katera koli druga vrednost, ki jo želite
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        margin: 10px; // dodajanje nekaj prostora okoli vsake slike
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+.enhanced-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, $secondary-color, darken($secondary-color, 10%)); 
+    padding: 3rem;
+    color: white;
+
+    .cta-content {
+      flex: 1;
+      padding-right: 2rem;
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .cta-image {
+      flex: 1.5;
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .enhanced-cta-button {
+      background-color: $primary-color;
+      color: white;
+      padding: 0.8rem 2.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
     }
 }
