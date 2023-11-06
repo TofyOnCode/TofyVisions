@@ -5,9 +5,9 @@ $secondary-color: #2c3e50;
     background-color: $primary-color;
     display: flex;
     justify-content: space-between;
-    align-items: center; // Vertikalno poravnavanje elementov v sredini
-    padding: 1rem 2rem; // Dodajanje notranjega prostora za navigacijsko vrstico
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Senca za tridimenzionalni učinek
+    align-items: center; 
+    padding: 1rem 2rem; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 
     .logo {
         font-size: 1.5rem;
@@ -17,7 +17,7 @@ $secondary-color: #2c3e50;
 
     .nav-buttons {
         display: flex;
-        align-items: center; // Vertikalno poravnavanje gumbov v sredini
+        align-items: center;
     }
 
     .btn {
@@ -153,13 +153,13 @@ footer {
 .galerija {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; // ali uporabite space-between, če želite
+    justify-content: space-around; 
 
     .artwork {
-        width: calc(100% / 6); // širina vsake slike je enaka šestini razpoložljive širine
-        max-width: 150px; // ali katera koli druga vrednost, ki jo želite
+        width: calc(100% / 6); 
+        max-width: 150px; 
         height: auto;
-        margin: 10px; // dodajanje nekaj prostora okoli vsake slike
+        margin: 10px; 
     }
 }
 
@@ -168,12 +168,12 @@ footer {
     padding: 2rem;
 
     .gallery-card {
-        width: calc(100% / 6); // širina vsake slike je enaka šestini razpoložljive širine
-        max-width: 150px; // ali katera koli druga vrednost, ki jo želite
+        width: calc(100% / 6);
+        max-width: 150px; 
         overflow: hidden;
         border-radius: 5px;
         box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        margin: 10px; // dodajanje nekaj prostora okoli vsake slike
+        margin: 10px; 
 
         img {
             width: 100%;
